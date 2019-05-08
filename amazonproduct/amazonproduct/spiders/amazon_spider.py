@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-import scrapy,re
+import scrapy
+import re
 from ..items import AmazonproductItem
 
 
@@ -30,7 +31,7 @@ class AmazonSpiderSpider(scrapy.Spider):
         yield items
 
         next_page = 'https://www.amazon.com/s?i=stripbooks&bbn=283155&rh=n%3A283155%2Cp_n_publication_date%3A1250227011&dc&page='\
-                    +str(AmazonSpiderSpider.page_number)+'&fst=as%3Aoff&qid=1557071015&rnid=1250225011&ref=sr_pg_2'
+                    + str(AmazonSpiderSpider.page_number) + '&fst=as%3Aoff&qid=1557071015&rnid=1250225011&ref=sr_pg_2'
         if AmazonSpiderSpider.page_number <= 5:
             print("This is page number : ", AmazonSpiderSpider.page_number)
             AmazonSpiderSpider.page_number += 1
