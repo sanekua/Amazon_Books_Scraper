@@ -2,11 +2,11 @@
 
 This is a Scrapy project to scrape books from Amazon website.
 
-This project extracts books, combined with the respective author names 
-price and image, also were used and following links. 
+This project extracts information about the title of the book, combined with the respective 
+author's name, price and image. In this project following links were used , when the first page was scraped,
+algorithm started to scrap the second page, etc.
 
 The extracted data looks like this sample
-
 
 {
 'product_author': 'The Washington Post',
